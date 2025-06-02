@@ -14,13 +14,13 @@ IREG - interrupt register
 OVFI - overflow interrupt
 */
 
-#if defined(__AVR_ATtiny84__)
+#if defined(__AVR_ATtiny84__) || defined(__AVR_ATtiny44__) || defined(__AVR_ATtiny24__)
     #define VECT TIM0_OVF_vect
     #define TREG TCCR0B
     #define CLKS CS01
     #define IREG TIMSK0
     #define OVFI TOIE0
-#elif defined(__AVR_ATtiny85__)
+#elif defined(__AVR_ATtiny85__) || defined(__AVR_ATtiny45) || defined(__AVR_ATtiny25__)
     #define VECT TIM0_OVF_vect
     #define TREG TCCR0B
     #define CLKS CS01
