@@ -6,8 +6,8 @@
 #endif
 
 #ifdef USE_CUSTOM
-    #ifndef TINYMILLIS_H
-    #define TINYMILLIS_H
+    #ifndef TINYTIME_H
+    #define TINYTIME_H
 
     #include <stdint.h>
 
@@ -15,7 +15,7 @@
     extern "C" {
     #endif
 
-    void initMillis(void);
+    void initTimer0(void);
     uint32_t millis(void);
 
     #ifdef __cplusplus

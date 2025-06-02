@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2025 Kendall Daniels <kendall.daniels.dev@gmail.com>
 // SPDX-License-Identifier: MIT
 
-#include "tinyMillis.h"
+#include "tinyTime.h"
 #include <stdint.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
@@ -42,8 +42,8 @@ ISR(VECT)
     }
 }
 
-void initMillis(void) __attribute__((constructor));
-void initMillis(void)
+void initTimer0(void) __attribute__((constructor));
+void initTimer0(void)
 {
     // setting prescaler to CLK / 8 (8MHz/8 = 1MHz)
     TREG |= (1<<CLKS);
