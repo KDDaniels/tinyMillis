@@ -18,6 +18,8 @@
     void initTimer0(void);
     uint32_t millis(void);
     uint32_t micros(void);
+    void delay(uint32_t d);
+    void delayMicros(uint32_t d);
 
     #ifdef __cplusplus
     }

@@ -90,3 +90,19 @@ uint32_t micros(void)
 
     return (overflows << 8) + tcount;
 }
+
+void delay(uint32_t d)
+{
+    uint32_t targetTime = millis() + d;
+
+    while (millis() < targetTime)
+    {;}
+}
+
+void delayMicros(uint32_t d)
+{
+    uint32_t targetTime = micros() + d;
+
+    while (micros() < targetTime)
+    {;}
+}
